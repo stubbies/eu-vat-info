@@ -24,7 +24,7 @@ const getEUVatInfo = async (options: EUVatOptions): Promise<EUVatResponse> => {
   return srj({
     envelope,
     url: 'https://ec.europa.eu/taxation_customs/vies/services/checkVatService',
-    SOAPAction: 'urn:ec.europa.eu:taxud:vies:services:checkVat:types'
+    SOAPAction: ''//'urn:ec.europa.eu:taxud:vies:services:checkVat:types'
   })
     .then(res => {
       if (res instanceof Error)

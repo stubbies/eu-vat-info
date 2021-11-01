@@ -8,7 +8,6 @@ const validVatNumber = Number(process.env.VAT_NUMBER);
 describe('tests', () => {
   test('Successful response', async () => {
     const data = await getEUVatInfo({ countryCode: 'EL', vatNumber: validVatNumber })
-    console.log(data)
     expect(data.status).toBe(Status.SUCCESS);
   })
 
