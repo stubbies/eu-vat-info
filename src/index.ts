@@ -8,7 +8,7 @@ const getEUVatInfo = async (options: EUVatOptions): Promise<EUVatResponse> => {
     return ErrorResponse(EUVatError.INVALID_EU_CODE, `Invalid EU country code \`${options.countryCode}\` provided`);
 
 
-  if (!validateVatNumber(options.vatNumber.toString()))
+  if (!validateVatNumber(options.vatNumber))
     return ErrorResponse(EUVatError.INVALID_VAT_NUMBER, `Invalid VAT number \`${options.vatNumber}\` provided`);
 
   const envelope = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ec.europa.eu:taxud:vies:services:checkVat:types">\

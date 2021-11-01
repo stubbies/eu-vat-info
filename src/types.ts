@@ -1,6 +1,6 @@
 export type EUVatOptions = {
   countryCode: string;
-  vatNumber: number;
+  vatNumber: string;
 };
 
 export enum Status {
