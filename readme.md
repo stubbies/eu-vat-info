@@ -19,7 +19,7 @@ const EuVatInfo = require('eu-vat-info');
 
 const response = await EuVatInfo({ 
   countryCode: 'EL', 
-  vatNumber: 123456789 
+  vatNumber: '123456789' 
 })
 ```
 
@@ -28,7 +28,7 @@ const response = await EuVatInfo({
 | Option        | Type                        | Required |
 |---------------|-----------------------------|----------|
 | `countryCode` | `string` ex. DE, IT, SE     | `true`   |
-| `vatNumber`   | `number`                    | `true`   |
+| `vatNumber`   | `string`                    | `true`   |
 
 ## `Response`
 
